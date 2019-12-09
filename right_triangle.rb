@@ -12,22 +12,21 @@ else
   puts "the triangle is NOT isoscales or equal"
 end
 if a > b && a > c
-  if  a * a == b * b + c * c
-    puts "the triangle is right"
-  else 
-    puts "the triangle is NOT right"
-  end
+  hypo = a
+  side1 = b
+  side2 = c
 elsif b > c && b > a
-  if  b * b == a * a + c * c
-    puts "the triangle is right"
-  else 
-    puts "the triangle is NOT right"
-  end
-else 
-  if  c * c == b * b + a * a
-    puts "the triangle is right"
-  else 
-    puts "the triangle is NOT right"
-  end
+  hypo = b
+  side1 = a
+  side2 = c
+else
+  hypo = c
+  side1 = b
+  side2 = a
 end
- 
+
+if  hypo * hypo == side1 * side1 + side2 * side2
+    puts "the triangle is right"
+else 
+    puts "the triangle is NOT right"
+end
